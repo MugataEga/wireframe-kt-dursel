@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karang Taruna Duri Selatan — Unit 05</title>
+<meta name="description" content="Portal informasi resmi Karang Taruna Kelurahan Duri Selatan Unit 05. Pengumuman, agenda kegiatan, galeri, dan aspirasi warga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Fraunces:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════ PUBLIC PAGES ═══════════════════════════ -->
+<div id="page-public" class="page active">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" onclick="showPage('public')">
+        <div class="nav-logo">KT</div>
+        <div>
+          <div class="nav-title">Karang Taruna</div>
+          <div class="nav-sub">Duri Selatan · Unit 05</div>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#pengumuman" class="active" onclick="closeMenu()">Pengumuman</a></li>
+        <li><a href="#agenda" onclick="closeMenu()">Agenda</a></li>
+        <li><a href="#galeri" onclick="closeMenu()">Galeri</a></li>
+        <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
+        <li><a href="#aspirasi" onclick="closeMenu()">Aspirasi</a></li>
+      </ul>
+      <a href="#aspirasi" class="nav-aspirasi">Kirim Aspirasi</a>
+      <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Resmi Online 2025</div>
+        <h1>Portal <em>Warga</em><br>Duri Selatan</h1>
+        <p class="hero-desc">Informasi, agenda kegiatan, dan aspirasi warga Kelurahan Duri Selatan dalam satu platform yang mudah diakses semua kalangan.</p>
+        <div class="hero-actions">
+          <a href="#pengumuman" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            Lihat Pengumuman
+          </a>
+          <a href="#profil" class="btn-outline">
+            Tentang Kami
+          </a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card fade-in">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Pengumuman Aktif</div>
+        </div>
+        <div class="stat-card fade-in delay-1">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Agenda Bulan Ini</div>
+        </div>
+        <div class="stat-card fade-in delay-2">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Foto Dokumentasi</div>
+        </div>
+        <div class="stat-card fade-in delay-3">
+          <div class="stat-number">32</div>
+          <div class="stat-label">Anggota Aktif</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- PENGUMUMAN -->
+    <section id="pengumuman" style="margin-bottom: 56px;">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Terbaru</div>
+          <h2 class="section-title">Info Warga</h2>
+        </div>
+        <a href="#" class="see-all">Semua Info →</a>
+      </div>
+      <div class="info-grid">
+        <!-- Card 1 -->
+        <a href="#" class="info-card fade-in">
+          <span class="info-category cat-info">Informasi</span>
+          <div class="info-title">Jadwal Posyandu Bulan April 2025</div>
+          <div class="info-excerpt">Posyandu rutin dilaksanakan setiap Rabu ke-2 dan ke-4 di Balai RW 05. Bawa buku KIA dan kartu identitas.</div>
+          <div class="info-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            12 Apr 2025
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Admin KT
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="#" class="info-card fade-in delay-1">
+          <span class="info-category cat-event">Kegiatan</span>
+          <div class="info-title">Festival Pemuda Duri Selatan 2025</div>
+          <div class="info-excerpt">Rangkaian acara memperingati hari jadi Karang Taruna Unit 05. Ada lomba olahraga, kesenian, dan bazaar UMKM.</div>
+          <div class="info-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            5 Apr 2025
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Sie Acara
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="#" class="info-card fade-in delay-2">
+          <span class="info-category cat-bakti">Kerja Bakti</span>
+          <div class="info-title">Kerja Bakti Lingkungan RT 02–05</div>
+          <div class="info-excerpt">Gotong royong pembersihan selokan dan pengecatan pagar kelurahan. Kumpul pukul 07.00 di balai RT 02.</div>
+          <div class="info-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            20 Apr 2025
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Ketua RT 02
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section id="agenda" class="agenda-section">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Mendatang</div>
+          <h2 class="section-title">Agenda Kegiatan</h2>
+        </div>
+        <a href="#" class="see-all">Semua Agenda →</a>
+      </div>
+      <div class="agenda-list">
+        <a href="#" class="agenda-item fade-in">
+          <div class="agenda-date">
+            <div class="agenda-day">20</div>
+            <div class="agenda-month">Apr</div>
+          </div>
+          <div class="agenda-info">
+            <div class="agenda-title">Kerja Bakti Lingkungan RT 02–05</div>
+            <div class="agenda-detail">
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                07.00 WIB
+              </span>
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Balai RT 02
+              </span>
+            </div>
+          </div>
+          <span class="info-category cat-bakti" style="flex-shrink:0; align-self:center;">Kerja Bakti</span>
+        </a>
+        <a href="#" class="agenda-item fade-in delay-1">
+          <div class="agenda-date">
+            <div class="agenda-day">25</div>
+            <div class="agenda-month">Apr</div>
+          </div>
+          <div class="agenda-info">
+            <div class="agenda-title">Rapat Koordinasi Pengurus Bulanan</div>
+            <div class="agenda-detail">
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                19.30 WIB
+              </span>
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Sekretariat KT
+              </span>
+            </div>
+          </div>
+          <span class="info-category cat-info" style="flex-shrink:0; align-self:center;">Internal</span>
+        </a>
+        <a href="#" class="agenda-item fade-in delay-2">
+          <div class="agenda-date">
+            <div class="agenda-day">1</div>
+            <div class="agenda-month">Mei</div>
+          </div>
+          <div class="agenda-info">
+            <div class="agenda-title">Turnamen Futsal Antar RT Kelurahan</div>
+            <div class="agenda-detail">
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                08.00 WIB
+              </span>
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Lapangan Bola RW 03
+              </span>
+            </div>
+          </div>
+          <span class="info-category cat-event" style="flex-shrink:0; align-self:center;">Olahraga</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="galeri-section">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Dokumentasi</div>
+          <h2 class="section-title">Galeri Kegiatan</h2>
+        </div>
+        <a href="#" class="see-all">Semua Foto →</a>
+      </div>
+      <div class="galeri-grid">
+        <div class="galeri-item large" style="background: linear-gradient(135deg, var(--green-100), var(--green-200));">
+          <div class="galeri-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(59,109,17,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span style="font-size:12px; color: var(--green-600); font-weight:500;">Festival Pemuda 2025</span>
+          </div>
+          <div class="galeri-overlay">
+            <div class="galeri-overlay-title">Festival Pemuda Duri Selatan 2025</div>
+          </div>
+        </div>
+        <div class="galeri-item" style="background: linear-gradient(135deg, var(--teal-50), var(--green-50));">
+          <div class="galeri-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(15,110,86,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span style="font-size:11px; color: var(--teal-600); font-weight:500;">Kerja Bakti</span>
+          </div>
+          <div class="galeri-overlay"><div class="galeri-overlay-title">Kerja Bakti Feb 2025</div></div>
+        </div>
+        <div class="galeri-item" style="background: linear-gradient(135deg, var(--amber-50), #FEF9C3);">
+          <div class="galeri-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(186,117,23,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span style="font-size:11px; color: var(--amber-400); font-weight:500;">Bazar UMKM</span>
+          </div>
+          <div class="galeri-overlay"><div class="galeri-overlay-title">Bazar UMKM Maret 2025</div></div>
+        </div>
+        <div class="galeri-item" style="background: linear-gradient(135deg, var(--green-50), var(--teal-50));">
+          <div class="galeri-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(59,109,17,0.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span style="font-size:11px; color: var(--green-600); font-weight:500;">Posyandu</span>
+          </div>
+          <div class="galeri-overlay"><div class="galeri-overlay-title">Posyandu Maret 2025</div></div>
+        </div>
+        <div class="galeri-item" style="background: linear-gradient(135deg, #F0FFFE, var(--teal-50));">
+          <div class="galeri-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(15,110,86,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            <span style="font-size:11px; color: var(--teal-600); font-weight:500;">Rapat Pengurus</span>
+          </div>
+          <div class="galeri-overlay"><div class="galeri-overlay-title">Rapat Koordinasi Feb 2025</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil" class="profil-section">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Organisasi</div>
+          <h2 class="section-title">Profil Karang Taruna</h2>
+        </div>
+      </div>
+      <div class="profil-grid">
+        <div class="profil-card">
+          <div class="profil-card-title">Visi & Misi</div>
+          <div class="visi-misi">
+            <p><strong>Visi:</strong> Mewujudkan pemuda Duri Selatan yang mandiri, kreatif, dan berkarakter dalam mendukung kemajuan kelurahan.</p>
+            <p><strong>Misi:</strong></p>
+            <p>· Mengembangkan potensi pemuda melalui kegiatan sosial, olahraga, dan kesenian</p>
+            <p>· Memperkuat solidaritas antar warga dan RT di Kelurahan Duri Selatan</p>
+            <p>· Mendukung program pemberdayaan masyarakat dan UMKM lokal</p>
+            <p>· Menjadi jembatan aspirasi warga kepada pemerintah kelurahan</p>
+          </div>
+        </div>
+        <div class="profil-card">
+          <div class="profil-card-title">Struktur Pengurus 2024–2026</div>
+          <div class="pengurus-list">
+            <div class="pengurus-item">
+              <div class="pengurus-avatar">AR</div>
+              <div>
+                <div class="pengurus-nama">Ahmad Rizaldi</div>
+                <div class="pengurus-jabatan">Ketua Umum</div>
+              </div>
+            </div>
+            <div class="pengurus-item">
+              <div class="pengurus-avatar">SP</div>
+              <div>
+                <div class="pengurus-nama">Siti Pratiwi</div>
+                <div class="pengurus-jabatan">Wakil Ketua</div>
+              </div>
+            </div>
+            <div class="pengurus-item">
+              <div class="pengurus-avatar">MF</div>
+              <div>
+                <div class="pengurus-nama">Muhammad Fajar</div>
+                <div class="pengurus-jabatan">Sekretaris</div>
+              </div>
+            </div>
+            <div class="pengurus-item">
+              <div class="pengurus-avatar">DN</div>
+              <div>
+                <div class="pengurus-nama">Dewi Nuraeni</div>
+                <div class="pengurus-jabatan">Bendahara</div>
+              </div>
+            </div>
+            <div class="pengurus-item">
+              <div class="pengurus-avatar">RH</div>
+              <div>
+                <div class="pengurus-nama">Rizky Hidayat</div>
+                <div class="pengurus-jabatan">Sie TIK</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASPIRASI -->
+    <section id="aspirasi" class="aspirasi-section">
+      <div class="aspirasi-wrapper">
+        <div class="aspirasi-left">
+          <div class="hero-badge" style="margin-bottom:16px">Kotak Aspirasi</div>
+          <h2>Suaramu<br>Didengar</h2>
+          <p style="margin-top:12px">Kirim saran, masukan, atau pertanyaan apapun kepada pengurus Karang Taruna. Kamu tidak perlu daftar akun — cukup isi nama dan pesan.</p>
+          <div style="margin-top:24px; display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:var(--gray-600);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Direspons dalam 1–3 hari kerja
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:var(--gray-600);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Identitas kamu terjaga
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="aspirasi-form" onsubmit="submitAspirasi(event)">
+            <div class="form-group">
+              <label class="form-label">Nama Kamu</label>
+              <input type="text" class="form-input" placeholder="Nama lengkap (opsional)" id="aspirasiName">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pesan / Aspirasi *</label>
+              <textarea class="form-textarea" placeholder="Tulis saran, masukan, atau pertanyaanmu di sini..." id="aspirasiMsg" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Kirim Aspirasi →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo">KT</div>
+            <div>
+              <div class="footer-brand-name">Karang Taruna</div>
+              <div class="footer-brand-sub">Duri Selatan · Unit 05</div>
+            </div>
+          </div>
+          <p class="footer-desc">Portal informasi resmi Karang Taruna Kelurahan Duri Selatan, Kecamatan Tambora, Jakarta Barat. Dibuat oleh Sie TIK sebagai media komunikasi warga.</p>
+          <div class="footer-contact">
+            <p>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kel. Duri Selatan, Kec. Tambora, Jakarta Barat
+            </p>
+            <p>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8"/></svg>
+              Hubungi via grup WhatsApp warga
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Menu</div>
+          <ul class="footer-links">
+            <li><a href="#pengumuman">Pengumuman</a></li>
+            <li><a href="#agenda">Agenda Kegiatan</a></li>
+            <li><a href="#galeri">Galeri Foto</a></li>
+            <li><a href="#profil">Profil Organisasi</a></li>
+            <li><a href="#aspirasi">Kirim Aspirasi</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Admin</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('login'); return false;">Login Admin</a></li>
+            <li><a href="#">Panduan Pengurus</a></li>
+            <li><a href="#">Laporan Kegiatan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Karang Taruna Duri Selatan Unit 05 · Sie TIK</p>
+        <p>Dibuat dengan ❤ untuk warga Duri Selatan</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════ LOGIN PAGE ═══════════════════════════ -->
+<div id="page-login" class="page">
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-logo">KT</div>
+      <div class="login-title">Login Admin</div>
+      <p class="login-sub">Karang Taruna Duri Selatan · Unit 05</p>
+      <form class="login-form" onsubmit="doLogin(event)">
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-input" placeholder="Masukkan username" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" placeholder="Masukkan password" required>
+        </div>
+        <button type="submit" class="form-submit" style="width:100%; text-align:center; justify-content:center;">
+          Masuk →
+        </button>
+      </form>
+      <div style="text-align:center; margin-top:20px;">
+        <a href="#" onclick="showPage('public'); return false;" style="font-size:13px; color:var(--gray-400); text-decoration:none;">← Kembali ke Website</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ADMIN PANEL ═══════════════════════════ -->
+<div id="page-admin" class="page">
+  <div class="admin-layout">
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+          <div class="nav-logo" style="width:32px; height:32px; font-size:14px;">KT</div>
+          <div>
+            <div class="admin-sidebar-title">Admin Panel</div>
+            <div class="admin-sidebar-sub">Karang Taruna DS</div>
+          </div>
+        </div>
+      </div>
+      <ul class="admin-nav">
+        <li><a href="#" class="active" onclick="switchAdminTab('dashboard', this)">
+          <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a></li>
+        <li><a href="#" onclick="switchAdminTab('pengumuman', this)">
+          <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          Pengumuman
+        </a></li>
+        <li><a href="#" onclick="switchAdminTab('agenda', this)">
+          <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Agenda
+        </a></li>
+        <li><a href="#" onclick="switchAdminTab('galeri', this)">
+          <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          Galeri
+        </a></li>
+        <li><a href="#" onclick="switchAdminTab('aspirasi', this)">
+          <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Aspirasi
+          <span style="margin-left:auto; background:var(--green-200); color:var(--green-900); font-size:10px; font-weight:700; padding:1px 7px; border-radius:999px;">3</span>
+        </a></li>
+        <li style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1);">
+          <a href="#" onclick="showPage('public'); return false;" style="margin-top:8px;">
+            <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Lihat Website
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="showPage('public'); return false;" style="color:rgba(255,100,100,0.8);">
+            <svg class="admin-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main">
+
+      <!-- DASHBOARD -->
+      <div id="admin-dashboard">
+        <div class="admin-header">
+          <div>
+            <div class="admin-page-title">Dashboard</div>
+            <div class="admin-page-sub">Selamat datang, Admin! Berikut ringkasan konten website.</div>
+          </div>
+          <div style="font-size:12px; color:var(--gray-400);">Senin, 21 April 2025</div>
+        </div>
+
+        <div class="admin-stats">
+          <div class="admin-stat">
+            <div class="admin-stat-num">24</div>
+            <div class="admin-stat-label">Total Pengumuman</div>
+            <div class="admin-stat-change">+3 bulan ini</div>
+          </div>
+          <div class="admin-stat">
+            <div class="admin-stat-num">8</div>
+            <div class="admin-stat-label">Agenda Aktif</div>
+            <div class="admin-stat-change">+2 bulan ini</div>
+          </div>
+          <div class="admin-stat">
+            <div class="admin-stat-num">152</div>
+            <div class="admin-stat-label">Foto di Galeri</div>
+            <div class="admin-stat-change">+18 bulan ini</div>
+          </div>
+          <div class="admin-stat">
+            <div class="admin-stat-num" style="color:#B91C1C;">3</div>
+            <div class="admin-stat-label">Aspirasi Belum Dibaca</div>
+            <div class="admin-stat-change" style="color:#B91C1C;">Perlu ditindaklanjuti</div>
+          </div>
+        </div>
+
+        <div class="admin-table-card">
+          <div class="admin-table-header">
+            <div class="admin-table-title">Pengumuman Terbaru</div>
+            <button class="btn-primary" style="padding:8px 16px; font-size:13px;" onclick="switchAdminTab('pengumuman')">+ Tambah</button>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Judul</th><th>Kategori</th><th>Tanggal</th><th>Aksi</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-title">Jadwal Posyandu Bulan April 2025</td>
+                <td><span class="badge badge-info">Informasi</span></td>
+                <td>12 Apr 2025</td>
+                <td><div class="table-actions"><button class="btn-table btn-edit">Edit</button><button class="btn-table btn-delete">Hapus</button></div></td>
+              </tr>
+              <tr>
+                <td class="td-title">Festival Pemuda Duri Selatan 2025</td>
+                <td><span class="badge badge-event">Kegiatan</span></td>
+                <td>5 Apr 2025</td>
+                <td><div class="table-actions"><button class="btn-table btn-edit">Edit</button><button class="btn-table btn-delete">Hapus</button></div></td>
+              </tr>
+              <tr>
+                <td class="td-title">Kerja Bakti Lingkungan RT 02–05</td>
+                <td><span class="badge badge-bakti">Kerja Bakti</span></td>
+                <td>20 Apr 2025</td>
+                <td><div class="table-actions"><button class="btn-table btn-edit">Edit</button><button class="btn-table btn-delete">Hapus</button></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="admin-table-card">
+          <div class="admin-table-header">
+            <div class="admin-table-title">Aspirasi Belum Dibaca</div>
+            <a href="#" onclick="switchAdminTab('aspirasi', null)" style="font-size:13px; color:var(--green-600); text-decoration:none; font-weight:600;">Lihat Semua →</a>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Nama</th><th>Pesan</th><th>Tanggal</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-title">Ibu Sari</td>
+                <td style="max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Mohon penerangan jalan di gang RT 04 ditambah...</td>
+                <td>19 Apr 2025</td>
+                <td><span class="badge badge-unread">Belum Dibaca</span></td>
+              </tr>
+              <tr>
+                <td class="td-title">Anonim</td>
+                <td style="max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Kapan ada kegiatan untuk lansia? Orang tua saya...</td>
+                <td>17 Apr 2025</td>
+                <td><span class="badge badge-unread">Belum Dibaca</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PENGUMUMAN TAB -->
+      <div id="admin-pengumuman" style="display:none;">
+        <div class="admin-header">
+          <div>
+            <div class="admin-page-title">Pengumuman</div>
+            <div class="admin-page-sub">Kelola info dan pengumuman untuk warga</div>
+          </div>
+          <button class="btn-primary" style="padding:10px 20px; font-size:13px;" onclick="showToast('Form tambah pengumuman terbuka')">+ Tambah Pengumuman</button>
+        </div>
+        <div class="admin-table-card">
+          <div class="admin-table-header">
+            <div class="admin-table-title">Semua Pengumuman (24)</div>
+            <select class="form-input" style="width:auto; padding:6px 12px; font-size:13px;">
+              <option>Semua Kategori</option>
+              <option>Informasi</option>
+              <option>Kegiatan</option>
+              <option>Kerja Bakti</option>
+            </select>
+          </div>
+          <table>
+            <thead><tr><th>Judul</th><th>Kategori</th><th>Penulis</th><th>Tanggal</th><th>Aksi</th></tr></thead>
+            <tbody>
+              <tr><td class="td-title">Jadwal Posyandu Bulan April 2025</td><td><span class="badge badge-info">Informasi</span></td><td>Admin KT</td><td>12 Apr 2025</td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit mode aktif')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Pengumuman dihapus')">Hapus</button></div></td></tr>
+              <tr><td class="td-title">Festival Pemuda Duri Selatan 2025</td><td><span class="badge badge-event">Kegiatan</span></td><td>Sie Acara</td><td>5 Apr 2025</td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit mode aktif')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Pengumuman dihapus')">Hapus</button></div></td></tr>
+              <tr><td class="td-title">Kerja Bakti Lingkungan RT 02–05</td><td><span class="badge badge-bakti">Kerja Bakti</span></td><td>Ketua RT 02</td><td>20 Apr 2025</td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit mode aktif')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Pengumuman dihapus')">Hapus</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- AGENDA TAB -->
+      <div id="admin-agenda" style="display:none;">
+        <div class="admin-header">
+          <div>
+            <div class="admin-page-title">Agenda Kegiatan</div>
+            <div class="admin-page-sub">Kelola jadwal dan agenda kegiatan</div>
+          </div>
+          <button class="btn-primary" style="padding:10px 20px; font-size:13px;" onclick="showToast('Form tambah agenda terbuka')">+ Tambah Agenda</button>
+        </div>
+        <div class="admin-table-card">
+          <div class="admin-table-header">
+            <div class="admin-table-title">Semua Agenda (8)</div>
+          </div>
+          <table>
+            <thead><tr><th>Kegiatan</th><th>Tanggal</th><th>Lokasi</th><th>Tipe</th><th>Aksi</th></tr></thead>
+            <tbody>
+              <tr><td class="td-title">Kerja Bakti Lingkungan RT 02–05</td><td>20 Apr 2025</td><td>Balai RT 02</td><td><span class="badge badge-bakti">Kerja Bakti</span></td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit agenda')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Agenda dihapus')">Hapus</button></div></td></tr>
+              <tr><td class="td-title">Rapat Koordinasi Pengurus Bulanan</td><td>25 Apr 2025</td><td>Sekretariat KT</td><td><span class="badge badge-info">Internal</span></td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit agenda')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Agenda dihapus')">Hapus</button></div></td></tr>
+              <tr><td class="td-title">Turnamen Futsal Antar RT Kelurahan</td><td>1 Mei 2025</td><td>Lapangan Bola RW 03</td><td><span class="badge badge-event">Olahraga</span></td><td><div class="table-actions"><button class="btn-table btn-edit" onclick="showToast('Edit agenda')">Edit</button><button class="btn-table btn-delete" onclick="showToast('Agenda dihapus')">Hapus</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GALERI TAB -->
+      <div id="admin-galeri" style="display:none;">
+        <div class="admin-header">
+          <div>
+            <div class="admin-page-title">Galeri Foto</div>
+            <div class="admin-page-sub">Kelola dokumentasi foto kegiatan (152 foto)</div>
+          </div>
+          <button class="btn-primary" style="padding:10px 20px; font-size:13px;" onclick="showToast('Pilih file untuk diupload')">+ Upload Foto</button>
+        </div>
+        <div class="galeri-grid" style="margin-bottom:24px;">
+          <div class="galeri-item large" style="background: linear-gradient(135deg, var(--green-100), var(--green-200)); cursor:default;">
+            <div class="galeri-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(59,109,17,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><span style="font-size:12px; color: var(--green-600); font-weight:500;">Festival Pemuda 2025</span></div>
+            <div class="galeri-overlay" style="opacity:0.9; justify-content:space-between; flex-direction:row; align-items:center; padding:10px 14px;">
+              <span style="font-size:12px; color:#fff; font-weight:600;">Festival Pemuda 2025</span>
+              <button onclick="showToast('Foto dihapus')" style="background:rgba(255,255,255,0.2); border:none; color:#fff; border-radius:6px; padding:4px 10px; font-size:11px; cursor:pointer;">Hapus</button>
+            </div>
+          </div>
+          <div class="galeri-item" style="background: linear-gradient(135deg, var(--teal-50), var(--green-50)); cursor:default;">
+            <div class="galeri-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(15,110,86,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg></div>
+            <div class="galeri-overlay" style="opacity:0.9; justify-content:space-between; flex-direction:row; align-items:center; padding:10px 14px;">
+              <span style="font-size:12px; color:#fff; font-weight:600;">Kerja Bakti</span>
+              <button onclick="showToast('Foto dihapus')" style="background:rgba(255,255,255,0.2); border:none; color:#fff; border-radius:6px; padding:4px 10px; font-size:11px; cursor:pointer;">Hapus</button>
+            </div>
+          </div>
+          <div class="galeri-item" style="background: linear-gradient(135deg, var(--amber-50), #FEF9C3); cursor:default;">
+            <div class="galeri-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(186,117,23,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg></div>
+            <div class="galeri-overlay" style="opacity:0.9; justify-content:space-between; flex-direction:row; align-items:center; padding:10px 14px;">
+              <span style="font-size:12px; color:#fff; font-weight:600;">Bazar UMKM</span>
+              <button onclick="showToast('Foto dihapus')" style="background:rgba(255,255,255,0.2); border:none; color:#fff; border-radius:6px; padding:4px 10px; font-size:11px; cursor:pointer;">Hapus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASPIRASI TAB -->
+      <div id="admin-aspirasi" style="display:none;">
+        <div class="admin-header">
+          <div>
+            <div class="admin-page-title">Aspirasi Warga</div>
+            <div class="admin-page-sub">3 pesan belum dibaca · 12 total masuk</div>
+          </div>
+        </div>
+        <div class="admin-table-card">
+          <div class="admin-table-header">
+            <div class="admin-table-title">Semua Aspirasi</div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn-table btn-edit" style="padding:6px 14px;" onclick="showToast('Filter: Belum Dibaca')">Belum Dibaca</button>
+              <button class="btn-table" style="padding:6px 14px; background:var(--gray-50); border-color:var(--gray-200); color:var(--gray-600);" onclick="showToast('Filter: Semua')">Semua</button>
+            </div>
+          </div>
+          <table>
+            <thead><tr><th>Nama</th><th>Pesan</th><th>Tanggal</th><th>Status</th><th>Aksi</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="td-title">Ibu Sari</td>
+                <td style="max-width:240px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Mohon penerangan jalan di gang RT 04 ditambah...</td>
+                <td>19 Apr 2025</td>
+                <td><span class="badge badge-unread">Belum Dibaca</span></td>
+                <td><button class="btn-table btn-edit" onclick="showToast('Aspirasi ditandai sudah dibaca')">Tandai Dibaca</button></td>
+              </tr>
+              <tr>
+                <td class="td-title">Anonim</td>
+                <td style="max-width:240px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Kapan ada kegiatan untuk lansia?</td>
+                <td>17 Apr 2025</td>
+                <td><span class="badge badge-unread">Belum Dibaca</span></td>
+                <td><button class="btn-table btn-edit" onclick="showToast('Aspirasi ditandai sudah dibaca')">Tandai Dibaca</button></td>
+              </tr>
+              <tr>
+                <td class="td-title">Pak Budi</td>
+                <td style="max-width:240px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Terimakasih KT, acaranya keren!</td>
+                <td>10 Apr 2025</td>
+                <td><span class="badge badge-read">Sudah Dibaca</span></td>
+                <td><span style="font-size:12px; color:var(--gray-400);">–</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-200)" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+  <span id="toast-msg">Berhasil!</span>
+</div>
+<sctript src="script.js"></script>
+</body>
+</html>
