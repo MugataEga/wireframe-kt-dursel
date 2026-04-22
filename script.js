@@ -1,69 +1,133 @@
-  function showPage(name) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    window.scrollTo(0, 0);
-  }
+  // ─── ACTIVE RW ───
+  let activeRW = 'all';
+  let activeSection = 'beranda';
 
-  function doLogin(e) {
-    e.preventDefault();
-    showPage('admin');
-  }
+  // ─── NAVIGATION ───
+  function showSection(sec) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById('sec-' + sec).classList.add('active');
 
-  function switchAdminTab(tab, el) {
-    document.querySelectorAll('[id^="admin-"]').forEach(t => t.style.display = 'none');
-    document.getElementById('admin-' + tab).style.display = 'block';
-    if (el) {
-      document.querySelectorAll('.admin-nav a').forEach(a => a.classList.remove('active'));
-      el.classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(b => {
+      if (b.textContent.toLowerCase().includes(sec) ||
+          (sec === 'beranda' && b.textContent === 'Beranda') ||
+          (sec === 'pengumuman' && b.textContent === 'Pengumuman') ||
+          (sec === 'agenda' && b.textContent === 'Agenda') ||
+          (sec === 'galeri' && b.textContent === 'Galeri') ||
+          (sec === 'profil' && b.textContent === 'Profil') ||
+          (sec === 'aspirasi' && b.textContent.includes('Aspirasi'))) {
+        b.classList.add('active');
+      }
+    });
+
+    activeSection = sec;
+    applyFilter(activeRW);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Show/hide RW bar for certain pages
+    const rwBar = document.getElementById('rwBar');
+    if (sec === 'profil' || sec === 'aspirasi') {
+      rwBar.style.display = 'none';
+    } else {
+      rwBar.style.display = 'block';
     }
   }
 
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
+  function goHome() {
+    showSection('beranda');
   }
 
-  function closeMenu() {
-    document.getElementById('navLinks').classList.remove('open');
+  // ─── MOBILE MENU ───
+  function toggleMobile() {
+    const m = document.getElementById('mobileMenu');
+    m.classList.toggle('open');
   }
 
-  let toastTimer;
-  function showToast(msg) {
-    const toast = document.getElementById('toast');
-    document.getElementById('toast-msg').textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+  // ─── RW FILTER ───
+  function filterRW(rw, btn) {
+    activeRW = rw;
+    document.querySelectorAll('.rw-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilter(rw);
   }
 
-  function submitAspirasi(e) {
-    e.preventDefault();
-    document.getElementById('aspirasiName').value = '';
-    document.getElementById('aspirasiMsg').value = '';
-    showToast('Aspirasi terkirim! Terima kasih.');
-  }
+  function applyFilter(rw) {
+    const items = document.querySelectorAll('.rw-item');
+    let visibleCount = 0;
 
-  // Intersection Observer for fade-in animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
+    items.forEach(item => {
+      const itemRWs = item.getAttribute('data-rw') || '';
+      const sectionEl = item.closest('.section');
+      if (!sectionEl) return;
+
+      if (rw === 'all' || itemRWs.includes(rw)) {
+        item.classList.remove('hidden');
+        if (sectionEl.id === 'sec-' + activeSection) visibleCount++;
+      } else {
+        item.classList.add('hidden');
       }
     });
-  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Update pill labels
+    const rwName = rw === 'all' ? 'Semua Wilayah' : rw.replace('rw0', 'RW 0');
+    ['pengumuman','agenda','galeri'].forEach(sec => {
+      const pill = document.getElementById(sec + '-rw-pill');
+      if (pill) pill.textContent = 'Menampilkan: ' + rwName;
+    });
 
-  // Active nav highlight on scroll
-  const sections = ['pengumuman', 'agenda', 'galeri', 'profil', 'aspirasi'];
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    // Filter messages
+    ['pengumuman','agenda','galeri'].forEach(sec => {
+      const msg = document.getElementById(sec + '-filter-msg');
+      if (!msg) return;
+      if (rw !== 'all') {
+        const secEl = document.getElementById('sec-' + sec);
+        const vis = secEl.querySelectorAll('.rw-item:not(.hidden)').length;
+        if (vis === 0) {
+          msg.textContent = 'Belum ada konten untuk wilayah ini.';
+          msg.classList.add('shown');
+        } else {
+          msg.textContent = `Menampilkan konten untuk ${rwName}`;
+          msg.classList.add('shown');
+        }
+      } else {
+        msg.classList.remove('shown');
+      }
     });
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-    });
-  });
+  }
+
+  // ─── PROFIL TABS ───
+  function showProfil(rw, btn) {
+    document.querySelectorAll('.profil-tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.rw-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('profil-' + rw).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // ─── ASPIRASI FORM ───
+  function submitAspirasi() {
+    const nama = document.getElementById('asp-nama').value.trim();
+    const rw   = document.getElementById('asp-rw').value;
+    const kat  = document.getElementById('asp-kategori').value;
+    const isi  = document.getElementById('asp-isi').value.trim();
+
+    if (!nama || !rw || !kat || !isi) {
+      alert('Harap lengkapi semua kolom wajib (*)');
+      return;
+    }
+
+    document.getElementById('aspirasi-form-body').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  function resetForm() {
+    document.getElementById('asp-nama').value = '';
+    document.getElementById('asp-hp').value = '';
+    document.getElementById('asp-rw').value = '';
+    document.getElementById('asp-kategori').value = '';
+    document.getElementById('asp-isi').value = '';
+    document.getElementById('aspirasi-form-body').style.display = 'block';
+    document.getElementById('form-success').style.display = 'none';
+  }
+
+  // ─── INIT ───
+  showSection('beranda');
